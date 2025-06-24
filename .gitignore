@@ -141,3 +141,7 @@ dist
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
+
+# SARIF output files
+*.sarif
+results.sarif

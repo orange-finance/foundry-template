@@ -25,10 +25,11 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "22"
-          cache: "npm"
+          # To enable caching, uncomment the line below after adding a lock file:
+          # cache: "npm" # or "yarn", "pnpm" based on your package manager
 
       - name: Install dependencies
-        run: npm ci
+        run: npm install
 
       - name: Install Foundry
         uses: foundry-rs/foundry-toolchain@v1

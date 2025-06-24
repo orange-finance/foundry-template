@@ -3,7 +3,10 @@
   "scripts": {
     "test": "forge test",
     "lint:sol": "forge fmt --check && solhint 'src/**/*.sol'",
-    "lint:sol:fix": "forge fmt && solhint --fix 'src/**/*.sol' --noPrompt"
+    "lint:sol:fix": "forge fmt && solhint --fix 'src/**/*.sol' --noPrompt",
+    "slither": "slither .",
+    "slither:triage": "slither . --triage-mode",
+    "slither:sarif": "rm -f results.sarif && slither . --sarif results.sarif"
   },
   "description": "",
   "dependencies": {
