@@ -8,6 +8,10 @@ on:
 env:
   FOUNDRY_PROFILE: ci
 
+permissions:
+  contents: read
+  pull-requests: write
+
 jobs:
   check:
     name: Foundry project
@@ -17,6 +21,15 @@ jobs:
         with:
           submodules: recursive
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
       - name: Install Foundry
         uses: foundry-rs/foundry-toolchain@v1
 
@@ -24,10 +37,10 @@ jobs:
         run: |
           forge --version
 
-      - name: Run Forge fmt
+      - name: Run lint
         run: |
-          forge fmt --check
-        id: fmt
+          npm run lint:sol
+        id: lint
 
       - name: Run Forge build
         run: |

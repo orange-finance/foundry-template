@@ -1,0 +1,12 @@
+{
+  "extends": "solhint:recommended",
+  "rules": {
+    "compiler-version": ["error", ">=0.8.29"],
+    "func-visibility": ["error", { "ignoreConstructors": true }],
+    "one-contract-per-file": "off",
+    "not-rely-on-time": "off",
+    "import-path-check": "off",
+    "func-name-mixedcase": "off",
+    "no-empty-blocks": "off"
+  }
+}
