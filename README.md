@@ -15,6 +15,7 @@ A Foundry-based smart contract development template with integrated security too
 Before using this template, you need to set up Codecov:
 
 1. **Add your repository to Codecov**:
+
    - Go to [codecov.io](https://codecov.io/)
    - Sign in with your GitHub account
    - Add your GitHub repository from the Codecov dashboard
@@ -86,7 +87,14 @@ Generates SARIF format output file (results.sarif) for visual analysis in IDEs.
 
 ### GitHub Actions Integration
 
-This project uses GitHub Actions to automatically run Slither analysis on every push and pull request. The workflow:
+This project uses GitHub Actions to automatically run Slither analysis on every push and pull request.
+
+**Prerequisites**: Code Security must be enabled for your repository:
+
+- Go to your repository Settings → Advanced Security
+- Enable "Code Security" (available for public repos or with GitHub Pro)
+
+The workflow:
 
 1. Runs Slither analysis on the codebase
 2. Generates a SARIF file with all findings
