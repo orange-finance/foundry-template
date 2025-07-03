@@ -10,6 +10,23 @@ A Foundry-based smart contract development template with integrated security too
 
 ## Setup
 
+### Codecov Configuration
+
+Before using this template, you need to set up Codecov:
+
+1. **Add your repository to Codecov**:
+   - Go to [codecov.io](https://codecov.io/)
+   - Sign in with your GitHub account
+   - Add your GitHub repository from the Codecov dashboard
+
+2. **Set up CODECOV_TOKEN in GitHub**:
+   - In Codecov, find your repository and copy the upload token
+   - Go to your GitHub repository settings
+   - Navigate to Settings → Secrets and variables → Actions
+   - Add a new repository secret named `CODECOV_TOKEN` with the token value from Codecov
+
+### Install Dependencies
+
 1. Install dependencies:
 
 ```bash
